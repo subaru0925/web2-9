@@ -5,16 +5,18 @@
     <title>はじめてのjQuery</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>// type="text/javascript">
-    $(document).ready(function(){
-        $（ "p"）.click（function（）{
-             $（this）.slideUp（）;
-               }）;
-        $（ "p"）.hover（function（）{
-             $（this）.addClass（ "hilite"）;
-        }, function （） {
-             $（this）.removeClass（ "hilite"）;
-         }）;
+   $(document).ready(function(){
+    
+    $("p").click(function () { 
+      $(this).slideUp(); 
     });
+    $("p").hover(function () {
+      $(this).addClass("hilite");
+    }, function () {
+      $(this).removeClass("hilite");
+    });
+
+  });
     </script>
     <style>
       p{color:red:margin:5px;cursor:pointer;}

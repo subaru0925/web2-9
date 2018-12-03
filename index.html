@@ -5,27 +5,22 @@
     <title>はじめてのjQuery</title>
     <script type="text/javascript" src="/jquery/js/jquery.js"></script>
     <script type="text/javascript">
-   $(document).ready(function(){
-    $("p").click(function () { 
-      $(this).slideUp(); 
-    });
-    $("p").hover(function () {
-      $(this).addClass("hilite");
-    }, function () {
-      $(this).removeClass("hilite");
+  $(document).ready(function(){
+    $("p").live("click", function(){
+      $(this).after("<p>新たなp要素もクリック！</p>");
     });
   });
-    </script>
-    <style>
-      p{color:red;margin:5px;cursor:pointer;}
-      p.hilite{background:yellow;}
+  </script>
+  <style>
+      p { background:yellow; font-weight:bold; cursor:pointer; 
+      padding:5px; }
+  p.over { background: #ccc; }
+  span { color:red; }
       </style>
     </head>
   <body>
-    <p>最初の段落</p>
-    
-    <p>2番目の段落</p>
-    <p>もう一つの段落</p>
+     <p>ここをクリック！</p>
+  <span></span>
   </body>
   </html>
     
